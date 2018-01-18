@@ -31,7 +31,7 @@ clickEvent.preventDefault();
 var clickedHand = clickEvent.path["0"].innerText;
 console.log(clickedHand);
 
-    $(`td:contains(${clickedHand})`).css('background-color', 'yellow');
+    $(`td:contains(${clickedHand})`).toggleClass('active');
 
 })
     </script>
