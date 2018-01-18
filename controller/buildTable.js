@@ -14,8 +14,10 @@ function createT(){
 
     function appendLetterO () {
         row.appendChild(cell);
-        cell.innerHTML = arrWithSubArr[r][c]+"o";
+        cell.innerHTML = arrWithSubArr[c][r] + "o";
     }
+
+
 
     var tbl = document.getElementById("tbl");
 
@@ -55,11 +57,10 @@ function createT(){
             } else if (cell.id >168 && cell.id <169){
                 appendLetterS();
             }   else {
-                row.appendChild(cell);
-                cell.innerHTML = arrWithSubArr[c][r] + "o";
+                appendLetterO();
             }
             if (cell.id % (14) ==0) {
-                cell.style.backgroundColor = "yellow";
+                // cell.style.backgroundColor = "yellow";
                 cell.innerHTML = arrWithSubArr[c][r] ;
             }
 
