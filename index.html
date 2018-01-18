@@ -10,21 +10,46 @@
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/styles.css"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/js/materialize.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="css/styles.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">
 </head>
+<!-- Compiled and minified JavaScript -->
+
 
 <body onload="createT()">
 
 
-<table id="tbl" border="2px" > </table>
+<div class="flex-container " >
 
+    <div class="item " >
+    <h1 class="main-header">Poker chart</h1>
+
+    <table id="tbl" border="2px" >  </table>
+    </div>
+
+<div class="item buttons-items">
+
+    <div class="flex-container-button">
+        <button class="item-button" value="UTG">UTG</button>
+        <br>
+        <button class="item-button" value="HJ">HJ</button>
+        <br>
+        <button class="item-button" value="Cut_Off">CUT OFF</button>
+        <br>
+        <button class="item-button" value="Button">BUTTON</button>
+        <br>
+        <button class="item-button" value="Small Blind">SMALL BLIND</button>
+        <br>
+        <button class="item-button" value="Big Blind">BIG BLIND</button>
+    </div>
+
+</div>
+
+</div>
 
 <script>
-
-</script>
-
-    <script>
 document.getElementById("tbl")
 .addEventListener("click", function(clickEvent){
 clickEvent.preventDefault();
