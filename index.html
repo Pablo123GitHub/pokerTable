@@ -4,15 +4,36 @@
     <meta charset="utf-8">
     <title>Test with single page app </title>
 
+    <script type="text/javascript" src="js/Table.js"> </script>
+    <script type="text/javascript" src="controller/buildTable.js"> </script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
 </head>
 
 <body onload="createT()">
 
+
 <table id="tbl" border="2px" > </table>
 
-<script type="text/javascript" src="js/Table.js"> </script>
-<script type="text/javascript" src="controller/buildTable.js"> </script>
 
+<script>
+
+</script>
+
+    <script>
+document.getElementById("tbl")
+.addEventListener("click", function(clickEvent){
+clickEvent.preventDefault();
+var clickedHand = clickEvent.path["0"].innerText;
+console.log(clickedHand);
+
+    $(`td:contains(${clickedHand})`).css('background-color', 'yellow');
+
+})
+    </script>
 
 </body>
 

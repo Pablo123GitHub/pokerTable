@@ -10,14 +10,13 @@ function createT(){
     function appendLetterS () {
         row.appendChild(cell);
         cell.innerHTML = arrWithSubArr[r][c]+"s";
+
     }
 
     function appendLetterO () {
         row.appendChild(cell);
         cell.innerHTML = arrWithSubArr[c][r] + "o";
     }
-
-
 
     var tbl = document.getElementById("tbl");
 
@@ -62,10 +61,10 @@ function createT(){
             if (cell.id % (14) ==0) {
                 // cell.style.backgroundColor = "yellow";
                 cell.innerHTML = arrWithSubArr[c][r] ;
+
             }
 
         }
         tbl.appendChild(row);
     }
-
 }
