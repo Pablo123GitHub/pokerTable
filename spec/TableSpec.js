@@ -1,26 +1,11 @@
+"use strict";
+
 describe("Table", ()=> {
 
    var table;
 
    beforeEach(()=> {
       table = new Table();
-   });
-
-   describe("check the combos in chart created", ()=> {
-      it("has 'AA' at index 0 of the table created", ()=> {
-           expect(table.createGrid()[0]).toEqual('AA')
-       }) ;
-       it("has 'AK' at index 1 of the table created", ()=> {
-           expect(table.createGrid()[1]).toEqual('AK')
-
-       }) ;
-       it("has '22' at index 168 (last index) of the table created", ()=> {
-           expect(table.createGrid()[168]).toEqual('22')
-       }) ;
-
-       it("check length of the array of the chart table", ()=> {
-          expect(table.createGrid().length).toEqual(169);
-       });
    });
 
    describe("reOrganise the Grid array into 13 sub-arrays", ()=> {

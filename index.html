@@ -54,8 +54,8 @@ document.getElementById("tbl")
 .addEventListener("click", function(clickEvent){
 clickEvent.preventDefault();
 var clickedHand = clickEvent.path["0"].innerText;
-console.log(clickedHand);
-
+var grindWithSubConsole = gridWithSubArr();
+console.log(grindWithSubConsole);
     $(`td:contains(${clickedHand})`).toggleClass('active');
 
 })
