@@ -10,8 +10,9 @@
                         "T9s", "T8s", "98s", "87s", "76s",
                         "AA", "KK", "QQ", "JJ", "TT", "99", "88", "77", "66", "55",
                         "AKo", "AQo", "AJo", "KQo"];
-        var _HIJACK_RFI = ["82s"];
+        var _HIJACK_RFI = ["ATo", "97s", "65s", "44"];
         _HIJACK_RFI.splice(0,0, ..._UTG_RFI);
+
 
         function _addActiveClass (handsRange) {
             var i = handsRange.length;
