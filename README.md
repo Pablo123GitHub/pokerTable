@@ -8,7 +8,9 @@ Single page app with HTML, Javascript and CSS
 
 ## Testing 
 
-Using Jasmine standalone version. You just need to run SpecRunner.html in order to see the tests: 
+Using [Jasmine](https://jasmine.github.io/) for unit testing and [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery) in order to test the DOM. 
+
+To see the tests open SpecRunner.html
 
 ```
 cd pokerTable/SpecRunner.html
