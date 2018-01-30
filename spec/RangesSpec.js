@@ -47,6 +47,21 @@ describe("Learning about fixtures", function () {
         });
     });
 
+    describe("More tests with sandbox this time", function(){
+        it("can also receive the fixture as a parameter", function(){
+            setFixtures('<div class="whatever"> whatever you want</div>');
+            expect($('.whatever')).toExist();
+        });
+
+        it("offers a sandbox function for convenience", function(){
+            expect(sandbox).toBeDefined();
+            setFixtures(sandbox({'class': 'some-class'})); // sandbox() is a div with id 'sandbox'
+            expect( $('.some-class')).toExist();
+            expect( $('#sandbox')).toHaveClass('some-class');
+        });
+
+    });
+
     // it("can also receive the fixture as a parameter", )
 
 });

@@ -13,8 +13,23 @@
         var _HIJACK_RFI = ["ATo", "97s", "65s", "44"];
         _HIJACK_RFI.splice(0,0, ..._UTG_RFI);
 
+        var _CUTOFF_RFI = ["K8s","Q8s","J8s","86s", "54s","33", "22" ];
+        _CUTOFF_RFI.splice(0,0, ..._HIJACK_RFI);
+
+        var _BUTTON_RFI = ["K7s", "K6s", "K5s", "K4s", "K3s",
+                            "Q7s", "Q6s", "Q5s",
+                            "J7s", "J6s", "T7s", "T6s",
+                            "96s", "85s", "75s", "64s", "A4s", "43s",
+                            "A9o", "A8o", "A7o", "A6o", "A5o", "A4o", "A3o", "A2o",
+                            "K9o", "Q9o", "J9o", "T9o",
+                            "KJo", "QJo", "KTo", "QTo", "JTo"];
+        _BUTTON_RFI.splice(0,0, ..._CUTOFF_RFI);
+
+        var _SMALLBLIND_RFI = ["53s", "63s", "74s", "84s", "95s", "Q4s", "K2s", "32s"];
+        _SMALLBLIND_RFI.splice(0,0, ..._BUTTON_RFI);
 
         function _addActiveClass (handsRange) {
+            $('.active').removeClass('active');
             var i = handsRange.length;
             while (i--) {
                 $(`td:contains(${handsRange[i]})`).toggleClass('active');
@@ -29,7 +44,22 @@
             return _addActiveClass(_HIJACK_RFI);
         }
 
-        return {showUTGRange: showUTGRange, showHijack:showHijack}
+        function showCutOff() {
+            return _addActiveClass(_CUTOFF_RFI);
+        }
+
+        function showOnTheButton() {
+            return _addActiveClass(_BUTTON_RFI);
+        }
+
+        function showSmallBlind() {
+            return _addActiveClass(_SMALLBLIND_RFI);
+        }
+
+
+        return {showUTGRange: showUTGRange, showHijack:showHijack, showCutOff:showCutOff,
+            showOnTheButton: showOnTheButton, showSmallBlind: showSmallBlind}
+
     };
 
 })(this);
