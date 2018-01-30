@@ -10,10 +10,7 @@ table = new Table();
 arrWithSubArr = table.gridWithSubArr();
 
 range = new Range();
-UTG_range = range.UTG_RFI_range();
 
-
-console.log("hey what", UTG_range);
 
 function createT(){
 

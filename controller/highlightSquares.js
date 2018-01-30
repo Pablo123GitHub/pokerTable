@@ -1,3 +1,6 @@
+var range = new Range();
+
+
 document.getElementById("tbl")
     .addEventListener("click", function(clickEvent){
         clickEvent.preventDefault();
@@ -7,38 +10,18 @@ document.getElementById("tbl")
 
     });
 
-function hightLightSelection (handString) {
-    // console.log(handString);
-
-for (var i =0; i<handString.length; i++) {
-    $(`td:contains(${handString})`).addClass('active');
-}
-
-};
-
-
-var multipleSelection = function() {
-    // console.log.apply( this, arguments );
-    // console.log(arguments);
-    // console.log(this);
-    hightLightSelection.apply(this,arguments);
-
-};
-
 document.getElementById("underthegun")
     .addEventListener("click", function(clickEvent){
         clickEvent.preventDefault();
+        range.showUTGRange();
+    });
 
-        var selection = document.querySelectorAll("td");
-        var i = selection.length;
-        while (i--) {
-            selection[i].classList.add('active');
-        }
 
+document.getElementById("highjack")
+    .addEventListener("click", function(clickEvent){
+        clickEvent.preventDefault();
+        range.showHijack();
     });
 
 
 
-
-
-// $(`td:contains("AA")`).toggleClass('active');
