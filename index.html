@@ -5,7 +5,10 @@
     <title>Test with single page app </title>
 
     <script type="text/javascript" src="js/Table.js"> </script>
+    <script type="text/javascript" src="js/Ranges.js"> </script>
+
     <script type="text/javascript" src="controller/buildTable.js"> </script>
+
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -32,33 +35,25 @@
 <div class="item buttons-items">
 
     <div class="flex-container-button">
-        <button class="item-button" value="UTG">UTG</button>
+        <button class="item-button utg" value="UTG" id="underthegun">UTG</button>
         <br>
-        <button class="item-button" value="HJ">HJ</button>
+        <button class="item-button hj" value="HJ" id="highjack">HJ</button>
         <br>
-        <button class="item-button" value="Cut_Off">CUT OFF</button>
+        <button class="item-button" value="Cut_Off" id="cutoff">CUT OFF</button>
         <br>
-        <button class="item-button" value="Button">BUTTON</button>
+        <button class="item-button" value="Button" id="onthebutton">BUTTON</button>
         <br>
-        <button class="item-button" value="Small Blind">SMALL BLIND</button>
+        <button class="item-button" value="Small Blind" id="smallblind">SMALL BLIND</button>
         <br>
-        <button class="item-button" value="Big Blind">BIG BLIND</button>
+        <button class="item-button" value="Big Blind" id="bigblind">BIG BLIND</button>
     </div>
 
 </div>
 
 </div>
 
-<script>
-document.getElementById("tbl")
-.addEventListener("click", function(clickEvent){
-clickEvent.preventDefault();
-var clickedHand = clickEvent.path["0"].innerText;
-console.log(clickedHand);
-    $(`td:contains(${clickedHand})`).toggleClass('active');
+<script type="text/javascript" src="controller/highlightSquares.js"> </script>
 
-})
-    </script>
 
 </body>
 

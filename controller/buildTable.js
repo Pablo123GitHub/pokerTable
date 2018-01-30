@@ -1,16 +1,25 @@
+"use strict";
+
 var id  = 0;
 var table;
 var arrWithSubArr;
+var range ;
+var UTG_range;
 
 table = new Table();
 arrWithSubArr = table.gridWithSubArr();
+
+range = new Range();
+UTG_range = range.UTG_RFI_range();
+
+
+console.log("hey what", UTG_range);
 
 function createT(){
 
     function appendLetterS () {
         row.appendChild(cell);
         cell.innerHTML = arrWithSubArr[r][c]+"s";
-
     }
 
     function appendLetterO () {
@@ -68,3 +77,4 @@ function createT(){
         tbl.appendChild(row);
     }
 }
+
