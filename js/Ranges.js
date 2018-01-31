@@ -4,7 +4,7 @@
 
     exports.Range= function() {
         var _UTG_RFI = ["AKs","AQs", "AJs", "ATs","A9s", "A8s","A7s","A6s",
-                        "A5s","A4s","A4s","A3s", "A2s",
+                        "A5s","A4s","A3s", "A2s",
                         "KQs", "KJs", "KTs", "K9s",
                         "QJs", "QTs", "Q9s", "JTs", "J9s",
                         "T9s", "T8s", "98s", "87s", "76s",
@@ -19,7 +19,7 @@
         var _BUTTON_RFI = ["K7s", "K6s", "K5s", "K4s", "K3s",
                             "Q7s", "Q6s", "Q5s",
                             "J7s", "J6s", "T7s", "T6s",
-                            "96s", "85s", "75s", "64s", "A4s", "43s",
+                            "96s", "85s", "75s", "64s", "43s",
                             "A9o", "A8o", "A7o", "A6o", "A5o", "A4o", "A3o", "A2o",
                             "K9o", "Q9o", "J9o", "T9o",
                             "KJo", "QJo", "KTo", "QTo", "JTo"];

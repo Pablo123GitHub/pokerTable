@@ -1,6 +1,7 @@
 ## pokerTable
 
-Creating a basic Poker hands table chart 
+Creating a basic Poker chart that shows you what hand range should be open raised depending on the position at the table.
+
 
 ## Technology 
 
